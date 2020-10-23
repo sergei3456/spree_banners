@@ -1,0 +1,33 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+ru:
+  title: "Заголовок"
+  description: "Описание"
+  link: "Ссылка на страницу промо-акции"
+  start: "Начать показ"
+  end: "Закончить показ"
+  position: "Очередность показа баннеров"
+  image: "Изображение"
+  thumbnail: "Превью"
+  visible: "Включено"
+  new_banner: "Новый баннер"
+  back_to_banner_list: "Вернуться в список"
+  location: "Выберите расположение баннера"
+  location_page: "Для какой страницы размещен баннер"
+  pages:
+    front: "Для главной страницы"
+    category: "Для страницы категорий"
+    page: "Для товара"
+  types:
+    front_slider: "Слайдер на главной"
+    front_left: "На главной слева"
+    front_right: "На главной справа"
+    left_sidebar: "Баннер в левом блоке"
+    right_sidebar: "Баннер в правом блоке"
+    menu: "Баннер в меню"
+    top: "Баннер вверху"
+    bottom: "Баннер внизу"
+  spree:
+    banners: "Баннеры"
+

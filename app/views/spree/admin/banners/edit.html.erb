@@ -1,0 +1,17 @@
+<% content_for :page_title do %>
+  <%= plural_resource_name(Spree::Banner) %>/<%= @banner.title %>
+<% end %>
+
+<% content_for :page_actions do %>
+  <%= button_link_to t(:back_to_banner_list), admin_banners_url, class: 'btn-primary', :icon => 'icon-arrow-left' %>
+  <%= button_link_to t(:new_banner), new_object_url, {  :class => 'btn-success', :icon => 'icon-plus', :id => 'admin_new_banner_box' } %>
+<% end %>
+
+<%= render :partial => 'spree/shared/error_messages', :locals => { :target => @banners } %>
+
+<%= form_for [:admin, @banner], :method => :put, :html => { :multipart => true } do |f| %>
+  <fieldset class="no-border-top">
+    <%= render :partial => 'form', :locals => { :f => f } %>
+    <%= render :partial => 'spree/admin/shared/edit_resource_links' %>
+  </fieldset>
+<% end %>
