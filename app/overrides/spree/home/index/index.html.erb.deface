@@ -2,8 +2,8 @@
 <% banner = Spree::Banner.banner_front_left_published %>
 <% unless banner.nil? %>
   <div class="sale-banner" data-hook="front_left">
-    <a class="hover_effect1" href="<%= banner[:link] %>">
-      <img src="<%= result.image.variant(resize_to_limit: [295, 410]).processed.service_url %>" alt="<%= banner[:title] %>">
+    <a class="hover_effect1" href="<%= banner.link %>">
+      <img src="<%= result.image.variant(resize_to_limit: [295, 410]).processed.service_url %>" alt="<%= banner.title %>">
     </a>
   </div>
 <% end %>
