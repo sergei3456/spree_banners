@@ -32,7 +32,11 @@ module Spree
     }
 
     scope :banner_front_left_published, lambda {
-      where(location_page: 'front').where(location_type: 'front_left').where(visible: true).order(position: :asc).first
+      where(location_page: 'front')
+        .where(location_type: 'front_left')
+        .where(visible: true)
+        .order(position: :asc)
+        .first(1)
     }
 
     scope :banner_front_all, lambda {
