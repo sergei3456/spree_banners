@@ -1,11 +1,9 @@
 <!-- replace '[data-hook="front_left"]' -->
 <% banner = Spree::Banner.banner_front_left_published %>
 <% unless banner.nil? %>
-  <% if banner.location_type == 'front_left' %>
-    <div class="sale-banner" data-hook="front_left">
-      <a class="hover_effect1" href="<%#= banner.link %>">
-        <img src="<%= banner.image.variant(resize_to_limit: [295, 410]).processed.service_url %>" alt="<%= banner.title %>">
-      </a>
-    </div>
-  <% end %>
+  <div class="sale-banner" data-hook="front_left">
+    <a class="hover_effect1" href="<%= banner.link %>">
+      <img src="<%= banner.image.variant(resize_to_limit: [295, 410]).processed.service_url %>" alt="<%= banner.title %>">
+    </a>
+  </div>
 <% end %>
