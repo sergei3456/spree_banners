@@ -32,11 +32,11 @@ module Spree
     }
 
     scope :banner_front_left_published, lambda {
-      where(location_page: 'front').where(location_type: 'front_left').where(visible: true).order(position: :asc).first
+      where(location_type: 'front_left').where(visible: true).order(position: :asc).first
     }
 
     scope :banner_front_all, lambda {
-      where.not(location_type: 'front_slider').where(location_page: 'front').where(visible: true).order(position: :asc)
+      where.not(location_type: 'front_slider').where(visible: true).order(position: :asc)
     }
 
     def self.types_select
